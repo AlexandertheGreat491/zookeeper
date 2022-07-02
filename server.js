@@ -5,6 +5,8 @@ const { animals } = require('./data/animals');
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+const fs = require('fs');
+const path = require('path');
 
 //app.use method executed by Express.js server that mounts a function to the server that requests pass through before going to intended endpoint.
 //parse incoming string or array data
@@ -62,7 +64,6 @@ function createNewAnimal(body, animalsArray) {
   const animal = body;
   animalsArray.push(animal);
 
-  
   return animal;
 }
 
