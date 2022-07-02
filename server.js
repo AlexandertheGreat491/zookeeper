@@ -123,6 +123,11 @@ app.post('/api/animals', (req, res) => {
 /*req.query is multifaceted & combines multiple parameters, but 
 req.param is specific to a single property, intended to retrieve a single record*/
 
+//route to ./public/index.html
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
 });
