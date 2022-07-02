@@ -8,6 +8,8 @@ const app = express();
 
 //app.use method executed by Express.js server that mounts a function to the server that requests pass through before going to intended endpoint.
 //parse incoming string or array data
+/*express.urlencoded({extended: true}) method built into Express.js
+& takes incoming POST data & converts it to key/value pairings to be accessed in req.body object*/
 app.use(express.urlencoded({ extended: true }));
 //parse incoming JSON data
 app.use(express.json());
