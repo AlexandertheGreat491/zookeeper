@@ -90,8 +90,9 @@ app.get('/api/animals/:id', (req, res) => {
 //listens for POST requests
 //POST requests used by the user to request that a server accepts data.
 app.post('/api/animals', (req, res) => {
-  //req.body is where incoming content will be
-  console.log(req.body);
+  //set id based on what the index of the array will be
+  req.body.id = animals.length.toString();
+
   res.json(req.body);
 });
 
