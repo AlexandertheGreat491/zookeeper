@@ -65,7 +65,12 @@ app.get('/api/animals', (req, res) => {
 //defines the param object in the route path with <route>/;<parameterName>
 app.get('/api/animals/:id', (req, res) => {
   const result = findById(req.params.id, animals);
-  res.json(result);
+  if (result) {
+    res.json(result);
+  } else {
+    res.send(404);
+    //if no record of the animal being searched exists user gets a 404 error.
+  }
 });
 
 app.listen(PORT, () => {
