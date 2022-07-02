@@ -110,22 +110,18 @@ app.get('/api/animals/:id', (req, res) => {
 //listens for POST requests
 //POST requests used by the user to request that a server accepts data.
 app.post('/api/animals', (req, res) => {
-  //set id based on what the index of the array will be
+  // set id based on what the next index of the array will be
   req.body.id = animals.length.toString();
 
-  //add animal to json file and animals array in this function
-  const animal = createNewAnimal(req.body, animals);
-
-  res.json(req.body);
+  if (!validateAnimal(req.body)) {
+    res.status(400).send('The animal is not properly formatted.');
+  } else {
+    const animal = createNewAnimal(req.body, animals);
+    res.json(animal);
+  }
 });
-
 /*req.query is multifaceted & combines multiple parameters, but 
 req.param is specific to a single property, intended to retrieve a single record*/
-
-
-
-
-
 
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
