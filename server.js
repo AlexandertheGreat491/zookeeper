@@ -63,7 +63,10 @@ function findById(id, animalsArray) {
 function createNewAnimal(body, animalsArray) {
   const animal = body;
   animalsArray.push(animal);
-
+  fs.writeFileSync(
+    path.join(_dirname, './data/animals.json'),
+    JSON.stringify({ animals: animalsArray }, null, 2)
+  );
   return animal;
 }
 
