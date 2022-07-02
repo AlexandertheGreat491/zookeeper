@@ -75,7 +75,11 @@ app.get('/api/animals/:id', (req, res) => {
 
 //listens for POST requests
 //POST requests used by the user to request that a server accepts data.
-app.post('/api/animals', (req, res) => {});
+app.post('/api/animals', (req, res) => {
+  //req.body is where incoming content will be
+  console.log(req.body);
+  res.json(req.body);
+});
 
 /*req.query is multifaceted & combines multiple parameters, but 
 req.param is specific to a single property, intended to retrieve a single record*/
