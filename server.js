@@ -73,6 +73,10 @@ app.get('/api/animals/:id', (req, res) => {
   }
 });
 
+//listens for POST requests
+//POST requests used by the user to request that a server accepts data.
+app.post('/api/animals', (req, res) => {});
+
 /*req.query is multifaceted & combines multiple parameters, but 
 req.param is specific to a single property, intended to retrieve a single record*/
 app.listen(PORT, () => {
