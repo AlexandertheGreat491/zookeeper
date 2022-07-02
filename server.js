@@ -73,6 +73,8 @@ app.get('/api/animals/:id', (req, res) => {
   }
 });
 
+/*req.query is multifaceted & combines multiple parameters, but 
+req.param is specific to a single property, intended to retrieve a single record*/
 app.listen(PORT, () => {
   console.log(`API server now on port ${PORT}!`);
 });
