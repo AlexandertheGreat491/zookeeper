@@ -4,6 +4,7 @@ const zookeeperRoutes = require('../apiRoutes/zookeeperRoutes');
 
 router.use(animalRoutes);
 router.use(zookeeperRoutes);
+router.use(require('./zookeeperRoutes'));
 
 module.exports = router;
 

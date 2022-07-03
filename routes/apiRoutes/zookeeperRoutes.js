@@ -3,7 +3,7 @@ const {
   filterByQuery,
   findById,
   createNewZookeeper,
-  validateZookeeper
+  validateZookeeper,
 } = require('../../lib/zookeepers');
 const { zookeepers } = require('../../data/zookeepers');
 
