@@ -1,4 +1,5 @@
 //imports
+const router = require('express').Router();
 const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../../lib/animals');
 const { animals } = require('../../data/animals');
 const { application } = require('express');
