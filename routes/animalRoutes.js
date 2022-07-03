@@ -2,7 +2,6 @@
 const router = require('express').Router();
 const { filterByQuery, findById, createNewAnimal, validateAnimal } = require('../../lib/animals');
 const { animals } = require('../../data/animals');
-const { application } = require('express');
 
 router.get('/animals', (req,res) => {
     let results = animals;
@@ -31,3 +30,5 @@ router.post('/animals', (req, res) => {
         const animal = createNewAnimal(req.body, animals);
     }
 });
+
+module.exports = router;
