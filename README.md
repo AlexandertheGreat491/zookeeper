@@ -19,7 +19,8 @@ Step 5: After completing steps 1-4, enter the following link into your browser (
 
 Please follow the steps in the Installation section. If those steps are properly followed you should get an app that resembles the screenshot below.
 
-functional-app-screenshot.jpg
+![functional-app-screenshot](https://user-images.githubusercontent.com/64184203/177053466-b4fd8b0b-437c-4f46-89a6-6b3a6a5ca0db.jpg)
+
 
 ## Credits
 
